@@ -15,6 +15,13 @@ class Collection {
 
     this.ref = new FirebaseRef( UrlUtils.resolve(endpoint, name)  );
   }
+  /**
+   *@summary Insert a document into a collection. Returns its unique _id;
+   */
+  insert(doc){
+    var newDocRef = this.ref.push(doc);
+    return newDocRef.key();
+  }
 };
 
 
