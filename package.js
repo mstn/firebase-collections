@@ -9,6 +9,7 @@ Package.onUse(function(api){
 
   api.use('mquandalle:bower@1.5.2_1', 'client');
   api.use('peerlibrary:url-utils', 'client');
+  api.use('tracker', 'client');
 
   api.addFiles([
     'bower.json',
