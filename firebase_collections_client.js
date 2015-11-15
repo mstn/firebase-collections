@@ -1,7 +1,4 @@
 "use strict"
-const FirebaseRef = Firebase;
-
-Firebase = {};
 
 // utility functions to handle cache operations
 //
@@ -116,7 +113,7 @@ class Collection {
       throw new Meteor.Error('firebase-error', 'no endpoint specified');
     }
 
-    this.ref = new FirebaseRef( UrlUtils.resolve(endpoint, name)  );
+    this.ref = new Firebase._FirebaseRef( UrlUtils.resolve(endpoint, name)  );
   }
   /**
    *@summary Insert a document into a collection. Returns its unique _id;
@@ -132,5 +129,4 @@ class Collection {
 
 
 Firebase.Collection = Collection;
-// useful for debug
-Firebase._FirebaseRef = FirebaseRef;
+
