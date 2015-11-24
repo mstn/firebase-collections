@@ -7,6 +7,8 @@ Package.describe({
 Package.onUse(function(api){
   api.versionsFrom('1.2'); 
 
+  api.use('ecmascript', 'client');
+
   api.use('mstn:firebase-core', 'client');
   api.use('peerlibrary:url-utils', 'client');
   api.use('tracker', 'client');
